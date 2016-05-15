@@ -1,0 +1,17 @@
+{
+  "name": "upload-dir-to-s3",
+  "description": "Upload a directory to a s3 bucket with a specified key prefix returning a promise that resolves to a list of modified keys",
+  "version": "0.0.1",
+  "private": false,
+  "engines": {
+    "node": "4.3.2",
+    "npm": "2.14.12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dvalentiate/upload-dir-to-s3.git"
+  },
+  "dependencies": {
+    "s3": "git://github.com/andrewrk/node-s3-client.git#34ca52276da8a20a7860594759a2eaa8d8260dc2"
+  }
+}
