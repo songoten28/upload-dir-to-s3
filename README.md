@@ -41,7 +41,7 @@ var defaultCacheControl = 'public, max-age=31536000'; // ~1 year
 var cacheMap = {
   'index.html': 'private, no-cache, no-store, must-revalidate' // no caching
 };
-var perFileCallback function (localFile, stat, s3ParamsCallback) {
+var perFileCallback = function (localFile, stat, s3ParamsCallback) {
   var key = localFile.replace(directory + '/', '');
   var s3Params = {
     ContentEncoding: 'gzip',
