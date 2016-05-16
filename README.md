@@ -39,15 +39,15 @@ uploadDirToS3(directory, bucket, keyPrefix, defaultS3Params)
 ... see Simple example ...
 var defaultCacheControl = 'public, max-age=31536000'; // ~1 year
 var cacheMap = {
-	'index.html': 'private, no-cache, no-store, must-revalidate' // no caching
+  'index.html': 'private, no-cache, no-store, must-revalidate' // no caching
 };
-var perFileCallback function (localFile, stat, s3ParamsCallback) {
-	var key = localFile.replace(directory + '/', '');
-	var s3Params = {
-		ContentEncoding: 'gzip',
-		CacheControl: cacheMap[key] || defaultCacheControl
-	};
-	s3ParamsCallback(null, s3Params);
+var perFileCallback = function (localFile, stat, s3ParamsCallback) {
+  var key = localFile.replace(directory + '/', '');
+  var s3Params = {
+    ContentEncoding: 'gzip',
+    CacheControl: cacheMap[key] || defaultCacheControl
+  };
+  s3ParamsCallback(null, s3Params);
 });
 
 uploadDirToS3(directory, bucket, keyPrefix, perFileCallback)
