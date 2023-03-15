@@ -12,6 +12,6 @@
     "url": "https://github.com/dvalentiate/upload-dir-to-s3.git"
   },
   "dependencies": {
-    "s3": "git://github.com/andrewrk/node-s3-client.git#34ca52276da8a20a7860594759a2eaa8d8260dc2"
+    "s3": "https://github.com/andrewrk/node-s3-client.git#34ca52276da8a20a7860594759a2eaa8d8260dc2"
   }
 }
